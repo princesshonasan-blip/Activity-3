@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IT Service Desk Portal</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header id="top-header">
+            <h1>IT Service Desk Portal</h1>
+            <p>Internal Technical Support and Ticket Tracking</p>
+        </header>
+
+        <nav>
+            <a href="#submit-ticket">Submit a Ticket</a>
+            <a href="#sample-tickets">Sample Tickets</a>
+            <a href="#guidelines">Guidelines</a>
+        </nav>
+
+        <main>
+            <section id="submit-ticket">
+                <h2>Submit an IT Support Concern</h2>
+                <p>
+                    Fill out the required details below to report a technical
+                    issue to the IT department.
+                </p>
+
+                <form>
+                    <fieldset>
+                        <legend>Employee Information</legend>
+
+                        <label for="employee-id">Employee ID</label>
+                        <input
+                            type="text"
+                            id="employee-id"
+                            name="employee-id"
+                            placeholder="Enter your employee ID"
+                            required
+                        />
+
+                        <label for="full-name">Full Name</label>
+                        <input
+                            type="text"
+                            id="full-name"
+                            name="full-name"
+                            placeholder="Enter your full name"
+                            required
+                        />
+
+                        <label for="company-email">Company Email</label>
+                        <input
+                            type="email"
+                            id="company-email"
+                            name="company-email"
+                            placeholder="name@company.com"
+                            required
+                        />
+
+                        <label for="department">Department</label>
+                        <select id="department" name="department" required>
+                            <option value="">Select your department</option>
+                            <option value="it">Information Systems</option>
+                            <option value="finance">Finance</option>
+                            <option value="hr">Human Resources</option>
+                            <option value="operations">Operations</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Issue Details</legend>
+
+                        <label for="issue-category">Issue Category</label>
+                        <select
+                            id="issue-category"
+                            name="issue-category"
+                            required
+                        >
+                            <option value="">Select an issue category</option>
+                            <option value="hardware">Hardware</option>
+                            <option value="software">Software</option>
+                            <option value="network">Network</option>
+                            <option value="account">Account Access</option>
+                        </select>
+
+                        <p class="field-label">Priority Level</p>
+                        <div class="radio-group">
+                            <input
+                                type="radio"
+                                id="priority-low"
+                                name="priority"
+                                value="low"
+                                required
+                            />
+                            <label for="priority-low">Low</label>
+
+                            <input
+                                type="radio"
+                                id="priority-medium"
+                                name="priority"
+                                value="medium"
+                            />
+                            <label for="priority-medium">Medium</label>
+
+                            <input
+                                type="radio"
+                                id="priority-high"
+                                name="priority"
+                                value="high"
+                            />
+                            <label for="priority-high">High</label>
+                        </div>
+
+                        <label for="date-reported">Date Reported</label>
+                        <input
+                            type="date"
+                            id="date-reported"
+                            name="date-reported"
+                            required
+                        />
+
+                        <label for="issue-description">Issue Description</label>
+                        <textarea
+                            id="issue-description"
+                            name="issue-description"
+                            rows="4"
+                            placeholder="Describe your technical concern"
+                            required
+                        ></textarea>
+
+                        <label for="attachment">File Attachment</label>
+                        <input
+                            type="file"
+                            id="attachment"
+                            name="attachment"
+                        />
+                    </fieldset>
+
+                    <div class="checkbox-group">
+                        <input
+                            type="checkbox"
+                            id="confirm"
+                            name="confirm"
+                            required
+                        />
+                        <label for="confirm"
+                            >I confirm that the information provided is
+                            accurate.</label
+                        >
+                    </div>
+
+                    <button type="submit">Submit Ticket</button>
+                </form>
+            </section>
+
+            <section id="sample-tickets">
+                <h2>Sample Support Tickets</h2>
+                <p>
+                    Review sample ticket records to see how concerns are
+                    categorized and tracked.
+                </p>
+
+                <table>
+                    <caption>
+                        Recent IT Service Desk Tickets
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Ticket ID</th>
+                            <th scope="col">Employee</th>
+                            <th scope="col">Department</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Priority</th>
+                            <th scope="col">Date Reported</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TCK-101</td>
+                            <td>Alonzo Reyes</td>
+                            <td>Finance</td>
+                            <td>Software</td>
+                            <td>High</td>
+                            <td>2026-11-24</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr>
+                            <td>TCK-102</td>
+                            <td>Camille Mendoza</td>
+                            <td>Human Resources</td>
+                            <td>Account Access</td>
+                            <td>Medium</td>
+                            <td>2026-11-25</td>
+                            <td>Open</td>
+                        </tr>
+                        <tr>
+                            <td>TCK-103</td>
+                            <td>Rafael Santos</td>
+                            <td>Operations</td>
+                            <td>Network</td>
+                            <td>High</td>
+                            <td>2026-11-26</td>
+                            <td>Resolved</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <aside id="guidelines">
+                <h2>Support Reminder</h2>
+                <p>
+                    Restart your computer first for minor glitches and attach a
+                    screenshot of any error message before submitting a ticket.
+                </p>
+            </aside>
+
+            <footer>
+                <p>© 2026 IT Service Desk Portal. All Rights Reserved.</p>
+            </footer>
+        </main>
+    </body>
+</html>
